@@ -1,106 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sherwin Ortega | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sherwin Ortega | Virtual Assistant Portfolio</title>
   <style>
+    /* General Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
+      line-height: 1.6;
+      background: #f9fafc;
       color: #333;
     }
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header Section */
     header {
-      background: url('https://static.vecteezy.com/system/resources/previews/001/410/877/non_2x/programming-and-coding-futuristic-banner-vector.jpg') center/cover no-repeat;
-      height: 250px;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      height: 300px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       color: white;
-      text-shadow: 1px 1px 5px black;
+      text-align: center;
     }
-    header h1 {
-      font-size: 2.8em;
-    }
+    header h1 { font-size: 3em; }
+    header p { font-size: 1.2em; margin-top: 10px; }
+
+    /* Container */
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
     }
+    section { margin-bottom: 60px; }
     h2 {
-      border-bottom: 2px solid #ddd;
+      font-size: 2em;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #0077cc;
+      display: inline-block;
       padding-bottom: 5px;
-      margin-top: 40px;
+    }
+    p { margin-bottom: 15px; }
+
+    /* Skills / Services */
+    .services, .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .services div, .skills span {
+      flex: 1 1 45%;
+      background: #eef2f7;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .skills span {
-      display: inline-block;
-      background: #e0e0e0;
+      background: #0077cc;
+      color: white;
+      font-weight: bold;
       padding: 8px 14px;
-      margin: 6px;
-      border-radius: 20px;
+      flex: none;
     }
-    ul {
-      padding-left: 20px;
+
+    /* Testimonials */
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      border-left: 5px solid #0077cc;
+      margin-bottom: 20px;
+      border-radius: 5px;
     }
-    a {
-      color: #007bff;
-      text-decoration: none;
+
+    /* Pricing */
+    .pricing {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-    a:hover {
-      text-decoration: underline;
+    .pricing .card {
+      flex: 1 1 30%;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
+    .pricing h3 { margin-bottom: 10px; }
+    .pricing p { margin-bottom: 8px; }
+
+    /* Contact */
+    .contact {
+      background: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+    }
+    .contact a { color: yellow; font-weight: bold; }
+
     footer {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 40px;
+      padding: 20px;
       color: #888;
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <h1>Sherwin Ortega</h1>
+    <div>
+      <h1>Sherwin Ortega</h1>
+      <p>Virtual Assistant | Helping Businesses Stay Organized & Grow</p>
+    </div>
   </header>
 
   <div class="container">
 
+    <!-- About -->
     <section>
       <h2>About Me</h2>
-      <p>Hi! I'm Sherwin👋— an aspiring web developer who loves to create things on the internet. I'm currently self-learning C++, HTML, CSS, and GitHub, and this website is part of my growth journey.</p>
+      <p>Hi! I'm Sherwin, a dedicated Virtual Assistant passionate about helping entrepreneurs and small businesses manage their tasks effectively. I specialize in admin support, social media management, and creative tasks that free up your time so you can focus on growing your business.</p>
     </section>
 
+    <!-- Services -->
     <section>
-      <h2>🛠️ Skills</h2>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>GitHub</span>
-        <span>Communication</span>
-        <span>Creative Thinking</span>
-      </div>
-    </section>
-
-    <section>
-      <h2>👓Projects</h2>
-      <ul>
-        <li><strong>Personal Portfolio Website</strong> – You're looking at it now! Made with pure HTML & CSS and hosted on GitHub Pages.</li>
-        <li><em>More coming soon...</em></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>✉️Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com">ortegasherwinofficial@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/Shawnnzy" target="_blank">github.com/Shawnnzy</a></p>
-      <p>LinkedIn: <a href="#">(https://www.linkedin.com/in/sherwin-ortega-aa8b09362/)</a></p>
-    </section>
-
-    <footer>
-      &copy; 2025 Sherwin Ortega
-    </footer>
-
-  </div>
-
-</body>
-</html>
+      <h2>Services Offered</h2>
+      <div class="services">
+        <div><strong>Admin Support</strong><br>Inbox management, scheduling, file organization, and research tasks.</div>
+        <div><strong>Social Media Management</strong><br>Content creation, scheduling, and engagement strategies.</div>
+        <div><strong>Design Support</strong><br>Canva graphics, presentations, and branded materials.</div>
+        <div><strong>Project Manage
