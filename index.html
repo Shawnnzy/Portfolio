@@ -7,76 +7,79 @@
   <style>
     /* ---------- RESET ---------- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #2c2c2c; }
 
-    /* ---------- NAVIGATION ---------- */
+    /* ---------- NAVBAR ---------- */
     nav {
+      background: #2e2a27;
+      color: #fff;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: fixed;
-      top: 0; left: 0; width: 100%;
-      background: #222; color: #fff;
-      display: flex; justify-content: center;
-      padding: 15px 0; z-index: 1000;
+      top: 0; width: 100%; z-index: 1000;
     }
-    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav h1 { font-size: 1.5em; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 20px; }
     nav ul li a {
-      color: #fff; text-decoration: none; font-weight: 600;
-      transition: color 0.3s ease;
+      color: #fff; text-decoration: none; transition: color 0.3s;
     }
-    nav ul li a:hover { color: #f39c12; }
+    nav ul li a:hover { color: #d4a373; }
 
     /* ---------- SECTIONS ---------- */
     section {
-      padding: 100px 15%; min-height: 100vh;
+      padding: 100px 15%;
+      min-height: 100vh;
       scroll-margin-top: 80px;
     }
-    h1, h2 { margin-bottom: 20px; color: #222; }
-    p { margin-bottom: 15px; }
 
-    /* ---------- HERO (Home) ---------- */
-    #home {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://picsum.photos/1600/900?random=2") no-repeat center center/cover;
-      color: #fff; text-align: center;
+    /* HERO SECTION */
+    #home { 
+      background: linear-gradient(rgba(132,93,83,0.85), rgba(132,93,83,0.85)),
+                  url("https://picsum.photos/1600/900?random=5") no-repeat center/cover;
+      color: #fff;
+      text-align: center;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
     }
-    #home h1 { font-size: 3rem; }
-    #home p { font-size: 1.2rem; max-width: 700px; }
-
-    /* ---------- CARDS ---------- */
-    .card {
-      background: #fff;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+    #home h2 { font-size: 3em; margin-bottom: 20px; }
+    #home p { font-size: 1.2em; margin-bottom: 30px; }
+    #home a {
+      background: #845d53; color: #fff; padding: 10px 20px;
+      text-decoration: none; border-radius: 5px; transition: background 0.3s;
     }
-    .card:hover { transform: translateY(-5px); }
+    #home a:hover { background: #a4715c; }
 
-    /* ---------- GRID ---------- */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    /* Alternating backgrounds */
+    #about, #portfolio, #tools { background: #f8f4f1; }
+    #services, #testimonials, #pricing { background: #ffffff; }
 
-    /* ---------- CONTACT ---------- */
-    #contact { background: #f4f4f4; text-align: center; }
+    /* CONTACT */
+    #contact { background: #2e2a27; color: #fff; text-align: center; }
     #contact a {
       display: inline-block;
-      margin-top: 15px; padding: 12px 25px;
-      background: #f39c12; color: #fff; font-weight: bold;
-      border-radius: 8px; text-decoration: none;
-      transition: background 0.3s ease;
+      margin-top: 20px;
+      background: #845d53; color: #fff; padding: 10px 20px;
+      text-decoration: none; border-radius: 5px; transition: background 0.3s;
     }
-    #contact a:hover { background: #d35400; }
+    #contact a:hover { background: #a4715c; }
 
-    /* ---------- SMOOTH SCROLL ---------- */
-    html { scroll-behavior: smooth; }
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #2e2a27; color: #fff;
+      text-align: center; padding: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- Navbar -->
   <nav>
+    <h1>My Portfolio</h1>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
@@ -86,79 +89,66 @@
     </ul>
   </nav>
 
-  <!-- HOME -->
+  <!-- Home Section -->
   <section id="home">
-    <h1>Hi, I’m Sherwin 👋</h1>
-    <p>Your dedicated Virtual Assistant. I help business owners save time and stay organized by handling admin tasks, social media, and more — so you can focus on growth.</p>
+    <h2>Hi, I'm Sherwin</h2>
+    <p>Virtual Assistant • Social Media • Canva • Notion • GHL</p>
+    <a href="#contact">Work With Me</a>
   </section>
 
-  <!-- ABOUT ME -->
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <div class="card">
-      <p>I started my journey as a Virtual Assistant to help busy entrepreneurs and professionals take back their time. With skills in Canva, GoHighLevel, Notion, and Google Suites, I bring both creativity and organization to every task. My goal is to be your reliable partner in efficiency and productivity.</p>
-    </div>
+    <p>I’m a proactive Virtual Assistant with experience in Canva, GoHighLevel, Notion, Google Suite, and Social Media Management. I bring organization, creativity, and reliable support to help businesses grow.</p>
   </section>
 
-  <!-- SERVICES -->
+  <!-- Services -->
   <section id="services">
-    <h2>Services Offered</h2>
-    <div class="grid">
-      <div class="card"><h3>General VA Tasks</h3><p>Email management, scheduling, data entry, and admin support.</p></div>
-      <div class="card"><h3>Social Media Management</h3><p>Content scheduling, engagement, and growth strategies.</p></div>
-      <div class="card"><h3>Design Support</h3><p>Graphics and presentations using Canva.</p></div>
-      <div class="card"><h3>CRM Assistance</h3><p>GoHighLevel and Notion setup & organization.</p></div>
-    </div>
+    <h2>Services</h2>
+    <ul>
+      <li>✅ Social Media Management</li>
+      <li>✅ Canva Graphics & Content Creation</li>
+      <li>✅ Email & Calendar Management</li>
+      <li>✅ CRM Support (GoHighLevel)</li>
+      <li>✅ Admin & Research Tasks</li>
+    </ul>
   </section>
 
-  <!-- PORTFOLIO -->
+  <!-- Portfolio -->
   <section id="portfolio">
-    <h2>Portfolio / Sample Work</h2>
-    <div class="grid">
-      <div class="card"><p>📊 Admin Task Sample</p></div>
-      <div class="card"><p>🎨 Canva Design Sample</p></div>
-      <div class="card"><p>📝 Content Writing Sample</p></div>
-    </div>
+    <h2>Portfolio</h2>
+    <p>[You can showcase images, projects, or sample works here]</p>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- Testimonials -->
   <section id="testimonials">
-    <h2>Client Testimonials</h2>
-    <div class="grid">
-      <div class="card"><p>“Sherwin is highly reliable and detail-oriented. He made my workflow so much easier.”</p></div>
-      <div class="card"><p>“Always delivers on time with excellent results. Highly recommended!”</p></div>
-    </div>
+    <h2>Testimonials</h2>
+    <p>“Sherwin has been a reliable VA who always delivers tasks on time and with great quality!”</p>
   </section>
 
-  <!-- TOOLS -->
+  <!-- Tools -->
   <section id="tools">
-    <h2>Tools & Software Expertise</h2>
-    <div class="grid">
-      <div class="card"><p>🛠️ Trello</p></div>
-      <div class="card"><p>🛠️ Asana</p></div>
-      <div class="card"><p>🛠️ Canva</p></div>
-      <div class="card"><p>🛠️ Notion</p></div>
-      <div class="card"><p>🛠️ LinkedIn Sales Navigator</p></div>
-      <div class="card"><p>🛠️ Google Workspace</p></div>
-    </div>
+    <h2>Tools I Use</h2>
+    <p>Canva • GoHighLevel • Notion • Google Workspace • Trello • Slack</p>
   </section>
 
-  <!-- PRICING -->
+  <!-- Pricing -->
   <section id="pricing">
-    <h2>Pricing & Packages</h2>
-    <div class="grid">
-      <div class="card"><h3>Hourly</h3><p>$10/hour</p></div>
-      <div class="card"><h3>Retainer</h3><p>20 hrs/month – $180</p></div>
-      <div class="card"><h3>Project-Based</h3><p>Custom pricing depending on scope</p></div>
-    </div>
+    <h2>Pricing</h2>
+    <p>Flexible packages depending on your business needs. Contact me for details!</p>
   </section>
 
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section id="contact">
-    <h2>Let’s Work Together</h2>
-    <p>Interested in working with me? Let’s connect!</p>
-    <a href="mailto:youremail@example.com">📩 Contact Me</a>
+    <h2>Contact Me</h2>
+    <p>Email: yourname@email.com</p>
+    <a href="mailto:yourname@email.com">Let’s Work Together</a>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sherwin Ortega | Virtual Assistant</p>
+  </footer>
 
 </body>
 </html>
