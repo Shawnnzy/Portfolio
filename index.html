@@ -35,4 +35,130 @@
     /* ---------- HERO (Home) ---------- */
     #home {
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://picsum.photos/1600/900?random=2") no-repeat center center/cover;
-      color: #f
+      color: #fff; text-align: center;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+    #home h1 { font-size: 3rem; }
+    #home p { font-size: 1.2rem; max-width: 700px; }
+
+    /* ---------- CARDS ---------- */
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+
+    /* ---------- GRID ---------- */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+    /* ---------- CONTACT ---------- */
+    #contact { background: #f4f4f4; text-align: center; }
+    #contact a {
+      display: inline-block;
+      margin-top: 15px; padding: 12px 25px;
+      background: #f39c12; color: #fff; font-weight: bold;
+      border-radius: 8px; text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    #contact a:hover { background: #d35400; }
+
+    /* ---------- SMOOTH SCROLL ---------- */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <h1>Hi, I’m Sherwin 👋</h1>
+    <p>Your dedicated Virtual Assistant. I help business owners save time and stay organized by handling admin tasks, social media, and more — so you can focus on growth.</p>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I started my journey as a Virtual Assistant to help busy entrepreneurs and professionals take back their time. With skills in Canva, GoHighLevel, Notion, and Google Suites, I bring both creativity and organization to every task. My goal is to be your reliable partner in efficiency and productivity.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Services Offered</h2>
+    <div class="grid">
+      <div class="card"><h3>General VA Tasks</h3><p>Email management, scheduling, data entry, and admin support.</p></div>
+      <div class="card"><h3>Social Media Management</h3><p>Content scheduling, engagement, and growth strategies.</p></div>
+      <div class="card"><h3>Design Support</h3><p>Graphics and presentations using Canva.</p></div>
+      <div class="card"><h3>CRM Assistance</h3><p>GoHighLevel and Notion setup & organization.</p></div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Portfolio / Sample Work</h2>
+    <div class="grid">
+      <div class="card"><p>📊 Admin Task Sample</p></div>
+      <div class="card"><p>🎨 Canva Design Sample</p></div>
+      <div class="card"><p>📝 Content Writing Sample</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="grid">
+      <div class="card"><p>“Sherwin is highly reliable and detail-oriented. He made my workflow so much easier.”</p></div>
+      <div class="card"><p>“Always delivers on time with excellent results. Highly recommended!”</p></div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <h2>Tools & Software Expertise</h2>
+    <div class="grid">
+      <div class="card"><p>🛠️ Trello</p></div>
+      <div class="card"><p>🛠️ Asana</p></div>
+      <div class="card"><p>🛠️ Canva</p></div>
+      <div class="card"><p>🛠️ Notion</p></div>
+      <div class="card"><p>🛠️ LinkedIn Sales Navigator</p></div>
+      <div class="card"><p>🛠️ Google Workspace</p></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <h2>Pricing & Packages</h2>
+    <div class="grid">
+      <div class="card"><h3>Hourly</h3><p>$10/hour</p></div>
+      <div class="card"><h3>Retainer</h3><p>20 hrs/month – $180</p></div>
+      <div class="card"><h3>Project-Based</h3><p>Custom pricing depending on scope</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Let’s Work Together</h2>
+    <p>Interested in working with me? Let’s connect!</p>
+    <a href="mailto:youremail@example.com">📩 Contact Me</a>
+  </section>
+
+</body>
+</html>
