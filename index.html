@@ -3,152 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My VA Portfolio</title>
+  <title>VA Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* ---------- RESET ---------- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #2c2c2c; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fdfcfb;
+      color: #2c2c2c;
+    }
 
-    /* ---------- NAVBAR ---------- */
+    /* NAVBAR */
     nav {
       background: #2e2a27;
-      color: #fff;
-      padding: 15px 10%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0; width: 100%; z-index: 1000;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    nav h1 { font-size: 1.5em; }
-    nav ul { list-style: none; display: flex; }
-    nav ul li { margin-left: 20px; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
     nav ul li a {
-      color: #fff; text-decoration: none; transition: color 0.3s;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
     }
-    nav ul li a:hover { color: #d4a373; }
-
-    /* ---------- SECTIONS ---------- */
-    section {
-      padding: 100px 15%;
-      min-height: 100vh;
-      scroll-margin-top: 80px;
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #d4a373;
     }
 
     /* HERO SECTION */
-    #home { 
-      background: linear-gradient(rgba(132,93,83,0.85), rgba(132,93,83,0.85)),
-                  url("https://picsum.photos/1600/900?random=5") no-repeat center/cover;
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+    }
+    .hero-text {
+      flex: 1;
+    }
+    .hero-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #2e2a27;
+      margin-bottom: 15px;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2em;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #845d53;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1em;
+      margin-bottom: 25px;
+      max-width: 500px;
+    }
+    .btn {
+      background: #845d53;
       color: #fff;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #a4715c;
+      transform: translateY(-3px);
+    }
+
+    /* IMAGE */
+    .hero img {
+      flex: 1;
+      max-width: 400px;
+      border-radius: 5px;
+    }
+
+    /* SUBLINE */
+    .subline {
       text-align: center;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2em;
+      font-style: italic;
+      padding: 40px 15%;
+      color: #2e2a27;
     }
-    #home h2 { font-size: 3em; margin-bottom: 20px; }
-    #home p { font-size: 1.2em; margin-bottom: 30px; }
-    #home a {
-      background: #845d53; color: #fff; padding: 10px 20px;
-      text-decoration: none; border-radius: 5px; transition: background 0.3s;
-    }
-    #home a:hover { background: #a4715c; }
-
-    /* Alternating backgrounds */
-    #about, #portfolio, #tools { background: #f8f4f1; }
-    #services, #testimonials, #pricing { background: #ffffff; }
-
-    /* CONTACT */
-    #contact { background: #2e2a27; color: #fff; text-align: center; }
-    #contact a {
-      display: inline-block;
-      margin-top: 20px;
-      background: #845d53; color: #fff; padding: 10px 20px;
-      text-decoration: none; border-radius: 5px; transition: background 0.3s;
-    }
-    #contact a:hover { background: #a4715c; }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: #2e2a27; color: #fff;
-      text-align: center; padding: 20px;
+    .subline strong {
+      font-weight: bold;
+      font-style: normal;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <nav>
-    <h1>My Portfolio</h1>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Services Offered</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Sample Works</a></li>
+      <li><a href="#">Contact Us</a></li>
     </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Hi, I'm Sherwin</h2>
-    <p>Virtual Assistant • Social Media • Canva • Notion • GHL</p>
-    <a href="#contact">Work With Me</a>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h3>I Help Businesses Find, Connect & Convert</h3>
+      <h1>YOUR BUSINESS,<br>MY EXPERTISE</h1>
+      <p>
+        I'm Sherwin Ortega, a Virtual Assistant helping entrepreneurs and executives streamline operations, 
+        generate quality leads, and make data-driven decisions. With expertise in admin support, research, 
+        and social media management, I deliver accuracy, efficiency, and value to your business.
+      </p>
+      <a href="#contact" class="btn">Schedule A Discovery Call</a>
+    </div>
+    <img src="https://via.placeholder.com/400x500.png?text=Your+Photo" alt="Sherwin VA">
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a proactive Virtual Assistant with experience in Canva, GoHighLevel, Notion, Google Suite, and Social Media Management. I bring organization, creativity, and reliable support to help businesses grow.</p>
-  </section>
-
-  <!-- Services -->
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>✅ Social Media Management</li>
-      <li>✅ Canva Graphics & Content Creation</li>
-      <li>✅ Email & Calendar Management</li>
-      <li>✅ CRM Support (GoHighLevel)</li>
-      <li>✅ Admin & Research Tasks</li>
-    </ul>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>[You can showcase images, projects, or sample works here]</p>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <p>“Sherwin has been a reliable VA who always delivers tasks on time and with great quality!”</p>
-  </section>
-
-  <!-- Tools -->
-  <section id="tools">
-    <h2>Tools I Use</h2>
-    <p>Canva • GoHighLevel • Notion • Google Workspace • Trello • Slack</p>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <p>Flexible packages depending on your business needs. Contact me for details!</p>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: yourname@email.com</p>
-    <a href="mailto:yourname@email.com">Let’s Work Together</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Sherwin Ortega | Virtual Assistant</p>
-  </footer>
+  <!-- SUBLINE -->
+  <div class="subline">
+    I <em>understand</em> your struggles, and I have the <strong>right solutions</strong> to help you overcome them!
+  </div>
 
 </body>
 </html>
